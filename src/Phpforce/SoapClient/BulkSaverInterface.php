@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpforce\SoapClient;
+namespace Tnwforce\SoapClient;
 
-use Phpforce\SoapClient\Response\SaveResult;
+use Tnwforce\SoapClient\Response\SaveResult;
 
 interface BulkSaverInterface
 {

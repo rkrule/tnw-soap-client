@@ -1,5 +1,5 @@
 <?php
-namespace Phpforce\SoapClient\Event;
+namespace Tnwforce\SoapClient\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 

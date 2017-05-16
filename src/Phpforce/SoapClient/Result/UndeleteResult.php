@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpforce\SoapClient\Result;
+namespace Tnwforce\SoapClient\Result;
 
 class UndeleteResult extends SaveResult
 {

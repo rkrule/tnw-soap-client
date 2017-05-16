@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpforce\SoapClient\EventListener;
+namespace Tnwforce\SoapClient\EventListener;
 
-use Phpforce\SoapClient\Event;
+use Tnwforce\SoapClient\Event;
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
 
 class LogTransactionListener

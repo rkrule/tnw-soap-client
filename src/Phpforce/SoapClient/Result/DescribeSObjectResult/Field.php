@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpforce\SoapClient\Result\DescribeSObjectResult;
+namespace Tnwforce\SoapClient\Result\DescribeSObjectResult;
 
 class Field
 {

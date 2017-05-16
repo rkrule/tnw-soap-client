@@ -1,13 +1,13 @@
 <?php
-namespace Phpforce\SoapClient\Tests;
+namespace Tnwforce\SoapClient\Tests;
 
-use Phpforce\SoapClient\BulkSaver;
+use Tnwforce\SoapClient\BulkSaver;
 
 class BulkSaverTest extends \PHPUnit_Framework_TestCase
 {
     public function testCreate()
     {
-        $client = $this->getMockBuilder('Phpforce\SoapClient\Client')
+        $client = $this->getMockBuilder('Tnwforce\SoapClient\Client')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -106,7 +106,7 @@ class BulkSaverTest extends \PHPUnit_Framework_TestCase
 
     protected function getClient()
     {
-        return $this->getMockBuilder('Phpforce\SoapClient\Client')
+        return $this->getMockBuilder('Tnwforce\SoapClient\Client')
             ->disableOriginalConstructor()
             ->getMock();
     }

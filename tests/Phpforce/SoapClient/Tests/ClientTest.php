@@ -1,12 +1,12 @@
 <?php
 
-namespace Phpforce\SoapClient\Tests;
+namespace Tnwforce\SoapClient\Tests;
 
-use Phpforce\SoapClient\Client;
-use Phpforce\SoapClient\Request;
-use Phpforce\SoapClient\Result;
-use Phpforce\SoapClient\Event;
-use Phpforce\SoapClient\Result\LoginResult;
+use Tnwforce\SoapClient\Client;
+use Tnwforce\SoapClient\Request;
+use Tnwforce\SoapClient\Result;
+use Tnwforce\SoapClient\Event;
+use Tnwforce\SoapClient\Result\LoginResult;
 use \ReflectionClass;
 
 class ClientTest extends \PHPUnit_Framework_TestCase
@@ -52,7 +52,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $client = new Client($soapClient, 'username', 'password', 'token');
         $result = $client->query('Select Name from Account Limit 1');
-        $this->assertInstanceOf('Phpforce\SoapClient\Result\RecordIterator', $result);
+        $this->assertInstanceOf('Tnwforce\SoapClient\Result\RecordIterator', $result);
         $this->assertEquals(1, $result->count());
     }
 
@@ -96,7 +96,7 @@ No such column 'aId' on entity 'Account'. If you are attempting to use a custom 
             ->method('update')
             ->will($this->returnValue($result));
 
-        $this->setExpectedException('\Phpforce\SoapClient\Exception\SaveException');
+        $this->setExpectedException('\Tnwforce\SoapClient\Exception\SaveException');
         $this->getClient($soapClient)->update(array(
             (object) array(
                 'Id'    => 'invalid-id',
@@ -192,7 +192,7 @@ No such column 'aId' on entity 'Account'. If you are attempting to use a custom 
 //            ->method('dispatch')
 //            ->with('php_force.soap_client.error');
 
-        $this->setExpectedException('\Phpforce\SoapClient\Exception\SaveException');
+        $this->setExpectedException('\Tnwforce\SoapClient\Exception\SaveException');
 
         $client->setEventDispatcher($dispatcher);
         $client->create(array($c), 'Contact');
@@ -205,7 +205,7 @@ No such column 'aId' on entity 'Account'. If you are attempting to use a custom 
 
     protected function getSoapClient($methods)
     {
-        $soapClient = $this->getMockBuilder('Phpforce\SoapClient\Soap\SoapClient')
+        $soapClient = $this->getMockBuilder('Tnwforce\SoapClient\Soap\SoapClient')
             ->setMethods(array_merge($methods, array('login')))
             ->setConstructorArgs(array(__DIR__.'/Fixtures/sandbox.enterprise.wsdl.xml'))
             ->getMock();

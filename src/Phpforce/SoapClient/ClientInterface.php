@@ -1,7 +1,7 @@
 <?php
-namespace Phpforce\SoapClient;
+namespace Tnwforce\SoapClient;
 
-use Phpforce\SoapClient\Result;
+use Tnwforce\SoapClient\Result;
 
 /**
  * Salesforce API client interface

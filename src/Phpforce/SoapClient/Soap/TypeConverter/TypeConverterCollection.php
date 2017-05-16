@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpforce\SoapClient\Soap\TypeConverter;
+namespace Tnwforce\SoapClient\Soap\TypeConverter;
 
 /**
  * A collection of type converters

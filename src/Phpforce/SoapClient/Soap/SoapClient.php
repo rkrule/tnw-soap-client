@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpforce\SoapClient\Soap;
+namespace Tnwforce\SoapClient\Soap;
 
 /**
  * SOAP client used for the Salesforce API client

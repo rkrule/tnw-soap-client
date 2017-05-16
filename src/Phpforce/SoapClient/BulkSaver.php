@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpforce\SoapClient;
+namespace Tnwforce\SoapClient;
 
-use Phpforce\SoapClient\Result\SaveResult;
+use Tnwforce\SoapClient\Result\SaveResult;
 
 /**
  * Add creates, updates and upserts to the queue, and issue them in bulk to

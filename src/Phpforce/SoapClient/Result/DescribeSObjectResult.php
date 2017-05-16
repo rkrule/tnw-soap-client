@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpforce\SoapClient\Result;
+namespace Tnwforce\SoapClient\Result;
 
-use Phpforce\SoapClient\Result\DescribeSObjectResult\Field;
+use Tnwforce\SoapClient\Result\DescribeSObjectResult\Field;
 
 class DescribeSObjectResult
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Phpforce\SoapClient\Soap;
+namespace Tnwforce\SoapClient\Soap;
 
-use Phpforce\SoapClient\Soap\TypeConverter;
+use Tnwforce\SoapClient\Soap\TypeConverter;
 
 /**
  * Factory to create a \SoapClient properly configured for the Salesforce SOAP
@@ -15,33 +15,33 @@ class SoapClientFactory
      * @var array
      */
     protected $classmap = array(
-        'ChildRelationship'     => 'Phpforce\SoapClient\Result\ChildRelationship',
-        'DeleteResult'          => 'Phpforce\SoapClient\Result\DeleteResult',
-        'DeletedRecord'         => 'Phpforce\SoapClient\Result\DeletedRecord',
-        'DescribeGlobalResult'  => 'Phpforce\SoapClient\Result\DescribeGlobalResult',
-        'DescribeGlobalSObjectResult' => 'Phpforce\SoapClient\Result\DescribeGlobalSObjectResult',
-        'DescribeSObjectResult' => 'Phpforce\SoapClient\Result\DescribeSObjectResult',
-        'DescribeTab'           => 'Phpforce\SoapClient\Result\DescribeTab',
-        'EmptyRecycleBinResult' => 'Phpforce\SoapClient\Result\EmptyRecycleBinResult',
-        'Error'                 => 'Phpforce\SoapClient\Result\Error',
-        'Field'                 => 'Phpforce\SoapClient\Result\DescribeSObjectResult\Field',
-        'GetDeletedResult'      => 'Phpforce\SoapClient\Result\GetDeletedResult',
-        'GetServerTimestampResult' => 'Phpforce\SoapClient\Result\GetServerTimestampResult',
-        'GetUpdatedResult'      => 'Phpforce\SoapClient\Result\GetUpdatedResult',
-        'GetUserInfoResult'     => 'Phpforce\SoapClient\Result\GetUserInfoResult',
-        'LeadConvert'           => 'Phpforce\SoapClient\Request\LeadConvert',
-        'LeadConvertResult'     => 'Phpforce\SoapClient\Result\LeadConvertResult',
-        'LoginResult'           => 'Phpforce\SoapClient\Result\LoginResult',
-        'MergeResult'           => 'Phpforce\SoapClient\Result\MergeResult',
-        'QueryResult'           => 'Phpforce\SoapClient\Result\QueryResult',
-        'SaveResult'            => 'Phpforce\SoapClient\Result\SaveResult',
-        'SearchResult'          => 'Phpforce\SoapClient\Result\SearchResult',
-        'SendEmailError'        => 'Phpforce\SoapClient\Result\SendEmailError',
-        'SendEmailResult'       => 'Phpforce\SoapClient\Result\SendEmailResult',
-        'SingleEmailMessage'    => 'Phpforce\SoapClient\Request\SingleEmailMessage',
-        'sObject'               => 'Phpforce\SoapClient\Result\SObject',
-        'UndeleteResult'        => 'Phpforce\SoapClient\Result\UndeleteResult',
-        'UpsertResult'          => 'Phpforce\SoapClient\Result\UpsertResult',
+        'ChildRelationship'     => 'Tnwforce\SoapClient\Result\ChildRelationship',
+        'DeleteResult'          => 'Tnwforce\SoapClient\Result\DeleteResult',
+        'DeletedRecord'         => 'Tnwforce\SoapClient\Result\DeletedRecord',
+        'DescribeGlobalResult'  => 'Tnwforce\SoapClient\Result\DescribeGlobalResult',
+        'DescribeGlobalSObjectResult' => 'Tnwforce\SoapClient\Result\DescribeGlobalSObjectResult',
+        'DescribeSObjectResult' => 'Tnwforce\SoapClient\Result\DescribeSObjectResult',
+        'DescribeTab'           => 'Tnwforce\SoapClient\Result\DescribeTab',
+        'EmptyRecycleBinResult' => 'Tnwforce\SoapClient\Result\EmptyRecycleBinResult',
+        'Error'                 => 'Tnwforce\SoapClient\Result\Error',
+        'Field'                 => 'Tnwforce\SoapClient\Result\DescribeSObjectResult\Field',
+        'GetDeletedResult'      => 'Tnwforce\SoapClient\Result\GetDeletedResult',
+        'GetServerTimestampResult' => 'Tnwforce\SoapClient\Result\GetServerTimestampResult',
+        'GetUpdatedResult'      => 'Tnwforce\SoapClient\Result\GetUpdatedResult',
+        'GetUserInfoResult'     => 'Tnwforce\SoapClient\Result\GetUserInfoResult',
+        'LeadConvert'           => 'Tnwforce\SoapClient\Request\LeadConvert',
+        'LeadConvertResult'     => 'Tnwforce\SoapClient\Result\LeadConvertResult',
+        'LoginResult'           => 'Tnwforce\SoapClient\Result\LoginResult',
+        'MergeResult'           => 'Tnwforce\SoapClient\Result\MergeResult',
+        'QueryResult'           => 'Tnwforce\SoapClient\Result\QueryResult',
+        'SaveResult'            => 'Tnwforce\SoapClient\Result\SaveResult',
+        'SearchResult'          => 'Tnwforce\SoapClient\Result\SearchResult',
+        'SendEmailError'        => 'Tnwforce\SoapClient\Result\SendEmailError',
+        'SendEmailResult'       => 'Tnwforce\SoapClient\Result\SendEmailResult',
+        'SingleEmailMessage'    => 'Tnwforce\SoapClient\Request\SingleEmailMessage',
+        'sObject'               => 'Tnwforce\SoapClient\Result\SObject',
+        'UndeleteResult'        => 'Tnwforce\SoapClient\Result\UndeleteResult',
+        'UpsertResult'          => 'Tnwforce\SoapClient\Result\UpsertResult',
     );
 
     /**

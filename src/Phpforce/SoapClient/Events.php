@@ -1,5 +1,5 @@
 <?php
-namespace Phpforce\SoapClient;
+namespace Tnwforce\SoapClient;
 
 final class Events
 {

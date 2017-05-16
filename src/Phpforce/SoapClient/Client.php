@@ -1,11 +1,11 @@
 <?php
-namespace Phpforce\SoapClient;
+namespace Tnwforce\SoapClient;
 
 use Phpforce\Common\AbstractHasDispatcher;
-use Phpforce\SoapClient\Soap\SoapClient;
-use Phpforce\SoapClient\Result;
-use Phpforce\SoapClient\Event;
-use Phpforce\SoapClient\Exception;
+use Tnwforce\SoapClient\Soap\SoapClient;
+use Tnwforce\SoapClient\Result;
+use Tnwforce\SoapClient\Event;
+use Tnwforce\SoapClient\Exception;
 
 /**
  * A client for the Salesforce SOAP API

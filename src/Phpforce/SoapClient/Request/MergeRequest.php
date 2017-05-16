@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpforce\SoapClient\Request;
+namespace Tnwforce\SoapClient\Request;
 
 class MergeRequest
 {

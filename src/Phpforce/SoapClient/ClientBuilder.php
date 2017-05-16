@@ -1,8 +1,8 @@
 <?php
-namespace Phpforce\SoapClient;
+namespace Tnwforce\SoapClient;
 
-use Phpforce\SoapClient\Soap\SoapClientFactory;
-use Phpforce\SoapClient\Plugin\LogPlugin;
+use Tnwforce\SoapClient\Soap\SoapClientFactory;
+use Tnwforce\SoapClient\Plugin\LogPlugin;
 use Psr\Log\LoggerInterface;
 
 /**

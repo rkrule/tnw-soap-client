@@ -1,7 +1,7 @@
 <?php
-namespace Phpforce\SoapClient\Result;
+namespace Tnwforce\SoapClient\Result;
 
-use Phpforce\SoapClient\Client;
+use Tnwforce\SoapClient\Client;
 
 /**
  * Iterator that contains records retrieved from the Salesforce API

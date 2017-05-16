@@ -1,5 +1,5 @@
 <?php
-namespace Phpforce\SoapClient\Result;
+namespace Tnwforce\SoapClient\Result;
 
 class DeleteResult extends SaveResult
 {

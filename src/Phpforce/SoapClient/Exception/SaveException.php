@@ -1,5 +1,5 @@
 <?php
-namespace Phpforce\SoapClient\Exception;
+namespace Tnwforce\SoapClient\Exception;
 
 /**
  * Collection of faulty results

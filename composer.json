@@ -4,7 +4,7 @@
     "description": "A PHP client for the Salesforce SOAP API",
     "keywords": [ "salesforce", "crm", "soap", "force.com", "web services" ],
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "authors": [
         {
             "name": "David de Boer",
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Tnwforce\\SoapClient": "src"
+            "Tnw\\SoapClient": "src"
         }
     }
 }

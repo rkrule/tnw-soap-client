@@ -1,7 +1,7 @@
 <?php
 namespace Tnw\SoapClient;
 
-use Phpforce\Common\AbstractHasDispatcher;
+use Tnw\SoapClient\Common\AbstractHasDispatcher;
 use Tnw\SoapClient\Soap\SoapClient;
 use Tnw\SoapClient\Result;
 use Tnw\SoapClient\Event;

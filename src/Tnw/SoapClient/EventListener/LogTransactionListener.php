@@ -3,14 +3,13 @@
 namespace Tnw\SoapClient\EventListener;
 
 use Tnw\SoapClient\Event;
-use Symfony\Component\HttpKernel\Log\LoggerInterface;
 
 class LogTransactionListener
 {
     /**
      * Logger
      *
-     * @var LoggerInterface
+     * @var
      */
     private $logger;
 
@@ -21,7 +20,7 @@ class LogTransactionListener
      */
     private $logging;
     
-    public function __construct(LoggerInterface $logger)
+    public function __construct($logger)
     {
         $this->logger = $logger;
     }

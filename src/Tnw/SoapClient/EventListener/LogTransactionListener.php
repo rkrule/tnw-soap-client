@@ -3,13 +3,14 @@
 namespace Tnw\SoapClient\EventListener;
 
 use Tnw\SoapClient\Event;
+use Psr\Log\LoggerInterface;
 
 class LogTransactionListener
 {
     /**
      * Logger
      *
-     * @var
+     * @var LoggerInterface
      */
     private $logger;
 
@@ -20,7 +21,7 @@ class LogTransactionListener
      */
     private $logging;
     
-    public function __construct($logger)
+    public function __construct(LoggerInterface $logger)
     {
         $this->logger = $logger;
     }

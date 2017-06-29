@@ -3,7 +3,7 @@
 namespace Tnw\SoapClient\EventListener;
 
 use Tnw\SoapClient\Event;
-use Symfony\Component\HttpKernel\Log\LoggerInterface;
+use Psr\Log\LoggerInterface;
 
 class LogTransactionListener
 {

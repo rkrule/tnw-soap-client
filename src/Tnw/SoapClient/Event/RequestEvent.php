@@ -5,44 +5,16 @@ use Symfony\Component\EventDispatcher\Event;
 
 class RequestEvent extends Event
 {
-    protected $method;
-    protected $params = array();
-    protected $response;
+    protected $request;
 
-    public function __construct($method, array $params = array())
+    public function __construct($request)
     {
-        $this->setMethod($method);
-        $this->setParams($params);
+        $this->request = $request;
     }
 
-    public function getMethod()
+    public function getRequest()
     {
-        return $this->method;
-    }
-
-    public function setMethod($method)
-    {
-        $this->method = $method;
-    }
-
-    public function getParams()
-    {
-        return $this->params;
-    }
-
-    public function setParams(array $params)
-    {
-        $this->params = $params;
-    }
-
-    public function getResponse()
-    {
-        return $this->response;
-    }
-
-    public function setResponse($response)
-    {
-        $this->response = $response;
+        return $this->request;
     }
 }
 

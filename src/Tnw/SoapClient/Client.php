@@ -207,7 +207,8 @@ class Client extends AbstractHasDispatcher implements ClientInterface
      */
     public function doLogin($username, $password, $token)
     {
-        $result = $this->soapClient->login(
+        $result = $this->logcall(
+            'login',
             array(
                 'username'  => $username,
                 'password'  => $password.$token
@@ -553,29 +554,31 @@ class Client extends AbstractHasDispatcher implements ClientInterface
         // Prepare headers
         $this->soapClient->__setSoapHeaders($this->getSessionHeader());
 
-        $requestEvent = new Event\RequestEvent($method, $params);
-        $this->dispatch(Events::REQUEST, $requestEvent);
-
-        try {
-            $result = $this->soapClient->$method($params);
-        } catch (\SoapFault $soapFault) {
-            $faultEvent = new Event\FaultEvent($soapFault, $requestEvent);
-            $this->dispatch(Events::FAULT, $faultEvent);
-
-            throw $soapFault;
-        }
-
-        // No result e.g. for logout, delete with empty array
+        $result = $this->logcall($method, $params);
         if (!isset($result->result)) {
             return array();
         }
 
-        $this->dispatch(
-            Events::RESPONSE,
-            new Event\ResponseEvent($requestEvent, $result->result)
-        );
-
         return $result->result;
+    }
+
+    protected function logcall($method, array $params = array())
+    {
+        try {
+            $result = $this->soapClient->$method($params);
+        } finally {
+            $this->dispatch(
+                Events::REQUEST,
+                new Event\RequestEvent($this->soapClient->__getLastRequest())
+            );
+
+            $this->dispatch(
+                Events::RESPONSE,
+                new Event\ResponseEvent($this->soapClient->__getLastResponse())
+            );
+        }
+
+        return $result;
     }
 
     /**

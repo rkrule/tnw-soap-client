@@ -5,7 +5,6 @@ use Symfony\Component\EventDispatcher\Event;
 
 class ResponseEvent extends Event
 {
-    protected $requestEvent;
     protected $response;
 
     /**
@@ -13,15 +12,9 @@ class ResponseEvent extends Event
      * @param RequestEvent $requestEvent
      * @param mixed $response   SaveResult[] or QueryResult
      */
-    public function __construct(RequestEvent $requestEvent, $response)
+    public function __construct($response)
     {
-        $this->requestEvent = $requestEvent;
         $this->response = $response;
-    }
-
-    public function getRequestEvent()
-    {
-        return $this->requestEvent;
     }
 
     public function getResponse()

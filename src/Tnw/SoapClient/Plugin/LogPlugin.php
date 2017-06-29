@@ -25,28 +25,17 @@ class LogPlugin implements EventSubscriberInterface
 
     public function onClientRequest(RequestEvent $event)
     {
-        $this->logger->info(sprintf(
-            '[phpforce/soap-client] request: call "%s" with params %s',
-            $event->getMethod(),
-            \json_encode($event->getParams())
+        $this->logger->debug(sprintf(
+            "request: body\n%s",
+            \print_r($event->getRequest(), true)
         ));
     }
 
     public function onClientResponse(ResponseEvent $event)
     {
-        $this->logger->info(sprintf(
-            '[phpforce/soap-client] response: %s',
+        $this->logger->debug(sprintf(
+            "response: body\n%s",
             \print_r($event->getResponse(), true)
-        ));
-    }
-
-    public function onClientFault(FaultEvent $event)
-    {
-        $this->logger->error(sprintf(
-            '[phpforce/soap-client] fault "%s" for request "%s" with params %s',
-            $event->getSoapFault()->getMessage(),
-            $event->getRequestEvent()->getMethod(),
-            \json_encode($event->getRequestEvent()->getParams())
         ));
     }
 
@@ -57,8 +46,7 @@ class LogPlugin implements EventSubscriberInterface
     {
         return array(
             'phpforce.soap_client.request'  => 'onClientRequest',
-            'phpforce.soap_client.response' => 'onClientResponse',
-            'phpforce.soap_client.fault'    => 'onClientFault'
+            'phpforce.soap_client.response' => 'onClientResponse'
         );
     }
 }

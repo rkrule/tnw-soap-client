@@ -34,4 +34,12 @@ class Error
     {
         return $this->statusCode;
     }
+    
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string)$this->getMessage();
+    }
 }

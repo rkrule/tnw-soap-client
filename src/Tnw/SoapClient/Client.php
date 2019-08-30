@@ -649,6 +649,10 @@ class Client extends AbstractHasDispatcher implements ClientInterface
      */
     protected function setEndpointLocation($location)
     {
+        // $location = https://eu15.salesforce.com/services/Soap/c/46.0/00D24000000J3AJ/0DF1p0000007EGj
+        $regexp = '|http[s]?:\/\/[^\/]*\/[^\/]*\/.[^\/]*\/.[^\/]*\/.[^\/]*|';
+        $location = preg_match($regexp, $location, $matches);
+        $location = reset($matches);
         $this->soapClient->__setLocation($location);
     }
 
